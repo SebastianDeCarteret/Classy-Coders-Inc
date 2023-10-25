@@ -16,9 +16,13 @@ class Employees {
     return this.#salary;
   }
   setSalary(amount) {
-    Employees.totalSalary -= this.getSalary();
-    this.#salary = amount;
-    Employees.totalSalary += this.#salary;
+    if (amount < 0) {
+      throw Error("Salary cannot be negative");
+    } else {
+      Employees.totalSalary -= this.getSalary();
+      this.#salary = amount;
+      Employees.totalSalary += this.#salary;
+    }
   }
   getStatus() {
     return this.#isHired;
