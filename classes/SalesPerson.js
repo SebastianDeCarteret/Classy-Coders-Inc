@@ -2,8 +2,8 @@ const { Employees } = require("./Employees");
 
 class SalesPerson extends Employees {
   #totalSales;
-  constructor(clients) {
-    super(clients);
+  constructor(name, position, salary, clients) {
+    super(name, position, salary, clients);
     this.clients = clients;
     this.#totalSales = 0;
   }
