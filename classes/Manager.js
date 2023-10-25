@@ -1,9 +1,8 @@
 const { Employees } = require("./Employees");
 class Manager extends Employees {
   #employeesManaged;
-  constructor(department, employeesManaged) {
-    super(department);
-    this.department = department;
+  constructor(employeesManaged, position, salary) {
+    super(employeesManaged, position, salary);
     this.#employeesManaged = [];
   }
   getEmployeesManaged() {
